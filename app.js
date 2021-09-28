@@ -29,9 +29,21 @@ function submitHandler() {
 
   let currentPriceValue = Number(currentPrice.value);
 
-  let calculatedValue = Number(
-    calculateProfitAndLoss(initialPriceValue, quantityValue, currentPriceValue)
-  );
+  if ((initialPriceValue, quantityValue, currentPriceValue !== 0)) {
+    if ((initialPriceValue, quantityValue, currentPriceValue <= 0)) {
+      showOutput("Values cant be less than 0");
+    } else {
+      let calculatedValue = Number(
+        calculateProfitAndLoss(
+          initialPriceValue,
+          quantityValue,
+          currentPriceValue
+        )
+      );
+    }
+  } else {
+    showOutput("Values cant be 0 or Empty");
+  }
 }
 
 submitBtn.addEventListener("click", submitHandler);
