@@ -16,7 +16,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
     var lossPercentage = (((initial - current) * 100) / initial).toFixed(2);
     showOutput(`
     Loss : ${loss} 
-    Loss% : ${lossPercentage}%`);
+    Loss% : -${lossPercentage}%`);
   } else {
     showOutput("No Pain = No Gain , No Gain = No Pain");
   }
@@ -33,8 +33,8 @@ function submitHandler() {
 
   let currentPriceValue = Number(currentPrice.value);
 
-  if ((initialPriceValue, quantityValue, currentPriceValue !== 0)) {
-    if ((initialPriceValue, quantityValue, currentPriceValue <= 0)) {
+  if ((initialPriceValue, quantityValue !== 0)) {
+    if ((initialPriceValue, quantityValue <= 0 && currentPriceValue < 0)) {
       showOutput("Values cant be less than 0");
     } else {
       let calculatedValue = Number(
