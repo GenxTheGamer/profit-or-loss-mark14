@@ -18,5 +18,12 @@ function calculateProfitAndLoss(initial, quantity, current) {
   }
 }
 
-calculateProfitAndLoss(100, 10, 10);
-calculateProfitAndLoss(20, 10, 100);
+function submitHandler() {
+  let initialPriceValue = initialPrice.value;
+  let quantityValue = quantity.value;
+  let currentPriceValue = currentPrice.value;
+
+  calculateProfitAndLoss(initialPriceValue, quantityValue, currentPriceValue);
+}
+
+submitBtn.addEventListener("click", submitHandler);
