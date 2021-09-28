@@ -7,13 +7,13 @@ const output = document.querySelector("#output");
 function calculateProfitAndLoss(initial, quantity, current) {
   if (current > initial) {
     var profit = ((current - initial) * quantity).toFixed(2);
-    var profitPercentage = (((profit / initial) * 100) / initial).toFixed(2);
+    var profitPercentage = (((current - initial) * 100) / initial).toFixed(2);
     showOutput(`
     Profit : ${profit} 
     Profit% : ${profitPercentage}%`);
   } else if (initial > current) {
     var loss = ((initial - current) * quantity).toFixed(2);
-    var lossPercentage = (((loss / initial) * 100) / initial).toFixed(2);
+    var lossPercentage = (((initial - current) * 100) / initial).toFixed(2);
     showOutput(`
     Loss : ${loss} 
     Loss% : ${lossPercentage}%`);
