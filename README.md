@@ -24,5 +24,5 @@
   
 
 ## Live Showcase
-[Link to Live showcase on Netlify]()
+[Link to Live showcase on Netlify](https://profitorloss-vv32.netlify.app)
 
