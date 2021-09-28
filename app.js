@@ -6,15 +6,19 @@ const output = document.querySelector("#output");
 
 function calculateProfitAndLoss(initial, quantity, current) {
   if (current > initial) {
-    var profit = (current - initial) * quantity;
-    var profitPercentage = (profit / initial) * 100;
-    showOutput(`Profit ${profit} and Profit% ${profitPercentage}%`);
+    var profit = ((current - initial) * quantity).toFixed(2);
+    var profitPercentage = (((profit / initial) * 100) / initial).toFixed(2);
+    showOutput(`
+    Profit : ${profit} 
+    Profit% : ${profitPercentage}%`);
   } else if (initial > current) {
-    var loss = (initial - current) * quantity;
-    var lossPercentage = (loss / initial) * 100;
-    showOutput(`Loss ${loss} and Loss% ${lossPercentage}%`);
+    var loss = ((initial - current) * quantity).toFixed(2);
+    var lossPercentage = (((loss / initial) * 100) / initial).toFixed(2);
+    showOutput(`
+    Loss : ${loss} 
+    Loss% : ${lossPercentage}%`);
   } else {
-    showOutput("no pain no gain no gain no pain");
+    showOutput("No Pain = No Gain , No Gain = No Pain");
   }
 }
 
